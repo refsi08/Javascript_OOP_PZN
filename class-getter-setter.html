@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Getter & Setter</title>
+</head>
+
+<body>
+
+    <h1>Class Getter & Setter:</h1>
+    <p>class getter dapat mengambil data sedangkan setter untuk mengubah data</p>
+
+    <script>
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            // untuk mengambil data property
+            get fullName() {
+                return `Hello ${this.firstName} ${this.lastName}`;
+            }
+
+            // untuk mengubah data property
+            set fullName(value) {
+                const result = value.split(" ");
+                this.firstName = result[0];
+                this.lastName = result[1];
+            };
+        };
+
+        const person = new Person("Refsi", "Maulana");
+        console.log(person);
+
+        // mengubah data property yang ada di parameter
+        person.firstName = "Wandy";
+        person.lastName = "Lim";
+
+        // memanggil data get fullName
+        console.log(person.fullName);
+
+        // mengubah data set fullName
+        person.fullName = "EKo Kurniawan";
+        console.log(person.fullName);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling Javascript:</title>
+</head>
+
+<body>
+
+    <h1>Error Handling:</h1>
+
+    <script>
+
+        class Math {
+
+            static sum(...numbers) {
+
+                if (numbers.length === 0) {
+                    throw new Error("Total parameter harus lebih dari 0");
+                }
+
+                let total = 0;
+                for (const number of numbers) {
+                    total = total + number;
+                }
+                return total;
+            }
+        }
+
+        // misal data parameter numbers kosong
+        try {
+            console.log(Math.sum());
+            console.log("EKO");
+        } catch (error) {
+            console.log(`Terjadi Error : ${error.message}`);
+        } finally {
+            console.log("Kode Program Selesai"); // finally akan dieksekusi setelah try catch selesai
+        }
+
+        // bisa diakses dimanapun method nya tanpa harus membuat object instance dulu
+    </script>
+
+</body>
+
+</html>

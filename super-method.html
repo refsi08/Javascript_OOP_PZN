@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Method Javascript:</title>
+</head>
+
+<body>
+
+    <h1>Super Method Javascript:</h1>
+    <p>** menggunakan kembali method yang ada di parent class</p>
+
+    <script>
+        class Shape {
+            paint() {
+                console.log("Paint Shape");
+            };
+        };
+
+        class Circle extends Shape {
+            paint() {
+                super.paint(); // jika ingin menggunakna method bawaan dari parent class
+                console.log("Paint Circle");
+            }
+        }
+
+        const shape = new Shape();
+        console.log(shape);
+        shape.paint();
+
+        const circle = new Circle();
+        console.log(circle);
+        circle.paint();
+    </script>
+</body>
+
+</html>

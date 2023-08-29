@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+
+<body>
+    <h1>Static Field:</h1>
+    <p>** Static field berfungsi agar fiel yang ada di dalam class tidak lagi milik object instance</p>
+
+    <script>
+        class Configuration {
+            static name = "Belajar Javascript";
+            static version = 1.0;
+            static author = "Eko Kurniawan";
+        };
+
+        const config = new Configuration();
+        console.log(config); // field / property tidak menjadi milik object lagi
+
+        // cara akses static field tanpa perlu membuat object lagi
+        Configuration.name = "Belajar Java";
+
+        console.log(Configuration.name);
+        console.log(Configuration.version);
+        console.log(Configuration.author);
+    </script>
+</body>
+
+</html>

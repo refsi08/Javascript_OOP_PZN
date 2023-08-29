@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Inheritance Constructor</title>
+</head>
+
+<body>
+
+    <h1>Javascript Inheritance Constructor</h1>
+
+    <script>
+        // parent constructor
+        function Employee(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                document.writeln(`Hello ${name} my nama is ${firstName}`);
+            }
+        }
+
+        // constructor inheritance
+        function Manager(firstName, lastName) {
+
+            // inheritance dengan kata kunci call
+            // semua property yang ada di function constructor ada di Manager.
+            Employee.call(this, firstName, lastName);
+        }
+
+        // create object
+        const eko = new Manager("Joko", "Maulana");
+        console.log(eko);
+        eko.sayHello("bro");
+
+    </script>
+</body>
+
+</html>

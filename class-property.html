@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Class</title>
+</head>
+
+<body>
+
+    <h1>Property Class :</h1>
+    <p>* memberikan property pada class Javascript</p>
+
+    <!-- example -->
+    <script>
+        // create class person
+        class Person {
+            // create constructor for parameter
+            constructor(name, alamat, age) {
+                // create property
+                this.name = name;
+                this.alamat = alamat;
+                this.age = age;
+            }
+        }
+
+        // create instance object 
+        const refsi = new Person("Eko", "Kurniawan", 27);
+
+        // change property value
+        refsi.name = "Refsi";
+        refsi.alamat = "jalanin aja dulu";
+        refsi.age = 17;
+
+        console.log(refsi);
+
+    </script>
+</body>
+
+</html>

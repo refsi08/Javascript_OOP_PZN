@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Constructor Function</title>
+</head>
+
+<body>
+
+    <h1>Parameter Constructor Function</h1>
+
+    <script>
+        //  membuat parameter constructor function
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.fullName = function (name) {
+                document.writeln(`Hello ${this.firstName} ${this.lastName}`);
+            }
+        }
+
+        // create object
+        const budi = new Person("Refsi", "Maulana");
+        budi.fullName();
+        console.log(budi);
+    </script>
+</body>
+
+</html>

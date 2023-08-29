@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Constructor</title>
+</head>
+
+<body>
+
+    <h1>Class Constructor</h1>
+
+    <p>class Constructor adalah memberikan parameter untuk class</p>
+
+    <script>
+        // class (object Person)
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            };
+
+            // Method
+            run() {
+                console.log(`${this.firstName} is Running!`);
+            };
+        };
+
+        // obect instance
+        const eko = new Person("Refsi", "Maulana");
+        eko.run();
+        console.log(eko);
+
+    </script>
+</body>
+
+</html>

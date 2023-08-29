@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance Javascript</title>
+</head>
+
+<body>
+
+    <h1>Class Inheritance :</h1>
+    <p>** membuat class turunan dari class parent </p>
+
+    <!-- example -->
+    <script>
+        class Fullstack {
+            fullstack(name) {
+                console.log(`seorang ${name} harus membuat bagian depan dan belakang aplikasi`);
+            }
+
+            front(name) {
+                console.log(`seorang ${name} membuat bagian halaman client`);
+            }
+
+            backend(name) {
+                console.log(`seorang ${name} membuat bagian data API`);
+            }
+        }
+        // class inheritance (turunan) dari class parent FullStack()
+        class Frontend extends Fullstack {
+
+        }
+
+        // class inheritance (turunan) dari class parent FullStack()
+        class Backend extends Fullstack {
+
+        }
+
+        const fullstackDev = new Fullstack();
+        console.log(fullstackDev);
+        fullstackDev.fullstack("FullStackDeveloper");
+
+        const frontDev = new Frontend();
+        console.log(frontDev);
+        frontDev.front("FrontEnd"); // method diambil dari class parent FullStack()
+
+        const backDev = new Backend();
+        console.log(backDev);
+        frontDev.backend("BackEnd"); // method diambil dari class parent FullStack()
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+
+<body>
+
+    <h1>Prototype</h1>
+    <script>
+        // constructor function
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.log(`Hello ${name}, my name is ${this.firstName}`);
+            }
+        }
+
+        // add property prototype
+        Person.prototype.sayBye = function () {
+            console.log("Good Bye");
+        }
+
+        Person.prototype.run = function () {
+            console.log(`${this.lastName} is running`);
+        }
+
+        // object instance
+        const eko = new Person("Eko", "Kurniawan");
+        console.log(eko);
+
+        // mengakses property prototypenya 
+        eko.sayBye();
+        eko.run();
+
+        const budi = new Person("Budi", "Nugroho");
+        console.log(budi);
+
+        // mengakses property prototypenya 
+        budi.sayBye();
+        budi.run();
+
+    </script>
+</body>
+
+</html>

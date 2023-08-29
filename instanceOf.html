@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instance of</title>
+</head>
+
+<body>
+
+    <h1>Instance Of</h1>
+    <p>** instance of digunakan untuk mengecek apakah objek merupakan dari class mana?</p>
+
+    <script>
+
+        class Employee {
+
+        }
+
+        class Manager {
+
+        }
+
+        class Supervisor extends Employee {
+
+        }
+
+        const employee = new Employee();
+        const manager = new Manager();
+        const supervisor = new Supervisor();
+
+        console.log(employee instanceof Employee);
+        console.log(employee instanceof Manager);
+
+        console.log(manager instanceof Manager);
+        console.log(manager instanceof Employee);
+
+        console.log(supervisor instanceof Supervisor);
+        console.log(supervisor instanceof Employee);
+    </script>
+</body>
+
+</html>

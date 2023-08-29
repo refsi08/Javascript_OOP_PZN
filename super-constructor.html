@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Constructor</title>
+</head>
+
+<body>
+    <h1>Super Constructor:</h1>
+
+    <p>* super constructor digunakna untuk membuat constructor pada child class dari parent yang dibuat</p>
+
+    <script>
+        // create class parent
+        class Parent {
+            // constructor parent class
+            constructor(namaAyah, namaIbu) {
+                this.namaAyah = namaAyah;
+                this.namaIbu = namaIbu;
+            };
+
+            // method
+            nikah() {
+                console.log(`${this.namaAyah} & ${this.namaIbu} akan menikah...`);
+            };
+        };
+
+
+        class Child extends Parent {
+            constructor(namaAyah, namaIbu, child) {
+                // memamnggil kata kunci super dan memasukkan parameter yang sama dnegan parameter di parent class
+                // agar parameter bisa digunakan di child class turunanya
+                // jika tidak maka akan terjadi undefined
+                super(namaAyah, namaIbu)
+                this.child = child;
+            }
+
+            anak() {
+                console.log(`Mereka dikaruniai seorang ${this.child}`);
+            };
+        };
+
+        const parent = new Parent("Refsi", "Sinta");
+        console.log(parent);
+        parent.nikah();
+
+        const child = new Child("Arif", "Bila", "Anak");
+        console.log(child);
+        child.anak();
+
+    </script>
+</body>
+
+</html>

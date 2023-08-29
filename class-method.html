@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Method Javascript :</title>
+</head>
+
+<body>
+
+    <h1>Class Method Javascript:</h1>
+    <p>** membuat method Javascript:</p>
+
+    <!-- example -->
+    <script>
+        // create class Person
+        class Person {
+            // create constructor class person
+            constructor(name) {
+                this.name = name;
+            };
+
+            // create method sayHello
+            sayHello() {
+                console.log(`${this.name} Menyapa Orang...`);
+            };
+
+            song(sound) {
+                console.log(`${this.name} Bernyanyi ${sound}`);
+            };
+        };
+
+        // create instance object
+        const refsi = new Person("Refsi");
+
+        // change property value name
+        refsi.name = "Eko";
+        console.log(refsi);
+
+        // call method from person class
+        refsi.sayHello();
+        refsi.song("Syalalalala...");
+    </script>
+
+
+    <!-- example 2 -->
+    <script>
+        class Car {
+            constructor(name, brand, color, speed) {
+                this.name = name;
+                this.brand = brand;
+                this.color = color;
+                this.speed = speed;
+            }
+
+            drive() {
+                console.log(`${this.name}-${this.brand} berwarna ${this.color} sedang berjalan dengan kecepatan ${this.speed} speed.`);
+                console.log(`Wah kencang sekali.....`);
+            }
+
+        }
+
+        const mobil1 = new Car("Mobil", "BMW", "Merah", 200);
+        const mobil2 = new Car("Mobil", "Ferraru", "Hitam", 300);
+        const mobil3 = new Car("Mobil", "Audi", "Silver", 400);
+
+        console.log(mobil1);
+        console.log(mobil2);
+        console.log(mobil3);
+
+        mobil1.drive();
+        mobil2.drive();
+        mobil3.drive();
+
+
+    </script>
+
+</body>
+
+</html>

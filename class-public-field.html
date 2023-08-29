@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Class Field</title>
+</head>
+
+<body>
+
+    <h1>Public Class Field:</h1>
+
+    <script>
+        class Person {
+            // public field / property
+            firstName;
+            lastName;
+            age = 20;
+
+            // constructor
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            get fullName() {
+                return `Hello ${this.firstName} ${this.lastName}`;
+            }
+
+            set fullName(value) {
+                const dataNama = value.split(" ");
+                this.firstName = dataNama[0];
+                this.lastName = dataNama[1];
+            }
+
+            // method
+            sayHello() {
+
+            }
+        }
+
+        const person = new Person("Refsi", "Maulana");
+        console.log(person);
+        console.log(person.fullName);
+
+        // set change data fullname 
+        person.fullName = "Arya Dipayana";
+        console.log(person.fullName);
+
+    </script>
+
+</body>
+
+</html>

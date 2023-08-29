@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static method</title>
+</head>
+
+<body>
+
+    <h1>Static Method</h1>
+    <p>static method digunakan untuk membuat method agar tidak bisa di akses lagi oleh object instance nya tetapi masih
+        masih bisa di akses dimanapun tanpa harus membuat object instance nya dulu.</p>
+
+    <script>
+        class Math {
+
+            static sum(...numbers) {
+                let total = 0;
+                for (const number of numbers) {
+                    total = total + number;
+                }
+                return total;
+            }
+        }
+
+        // bisa diakses dimanapun method nya tanpa harus membuat object instance dulu
+        console.log(Math.sum(1, 2, 3));
+    </script>
+
+</body>
+
+</html>

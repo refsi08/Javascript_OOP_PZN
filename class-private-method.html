@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Method</title>
+</head>
+
+<body>
+
+    <h1>Private Method:</h1>
+    <p>membuat method menjadi private</p>
+
+    <script>
+        class Person {
+
+            say(name) {
+                if (name) {
+                    this.#sayWithName(name);
+                } else {
+                    this.#sayWithoutName();
+                }
+            }
+
+            // private Method
+            #sayWithName(name) {
+                console.log(`Hello ${name}`);
+            }
+
+            // private Method
+            #sayWithoutName() {
+                console.log(`Hello`);
+            };
+        };
+
+        const person = new Person();
+        person.say("Refsi");
+    </script>
+</body>
+
+</html>
